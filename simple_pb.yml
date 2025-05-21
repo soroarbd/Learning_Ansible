@@ -2,6 +2,6 @@
 - name: First Basic PB
   hosts: localhost
 
-  tasks: 
-  - name: Test Ping 
-    ping: 
+  tasks:
+    - name: Test Connectivity
+      ping:
