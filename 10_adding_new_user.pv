@@ -1,0 +1,11 @@
+---
+- name: User Mgm
+  hosts: all 
+  tasks: 
+  - name: New user adding  playbook
+    user:
+     name: nick               #new user name will be nick 
+     comment: new user adding for QA team 
+     shell: /bin/bash         #It will be the default shell for nick user 
+     group: QA                #user nick add group , QA group must be exit in your ansible host 
+  
