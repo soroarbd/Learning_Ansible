@@ -1,6 +1,7 @@
 ---
 - name: First Basic PB
-  hosts: all
+  hosts: all 
+ 
 
   tasks:
     - name: Test Connectivity

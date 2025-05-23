@@ -1,6 +1,6 @@
 ---
 - name: Install service 
-  hosts: localhost
+  hosts: all
   
   tasks: 
   - name: Nginx Install 
