@@ -5,7 +5,7 @@
   - name: Create a file
     file: 
      path: /tmp/myansiblefile.txt
-     state: touch
+     state: absent
      owner: ubuntu2
      group: ubuntu2
      mode: u=rwx,g=rw,o=r
