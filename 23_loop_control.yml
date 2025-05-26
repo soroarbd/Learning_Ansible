@@ -1,0 +1,12 @@
+---
+- name: loop and loop control 
+  hosts: 192.168.17.129 
+  gather_facts: no 
+  tasks:
+   - name: Loop software 
+     debug:
+      msg: "This is sofware: {{item}}"
+     loop:
+      - wget
+      - apache2
+      - telnet

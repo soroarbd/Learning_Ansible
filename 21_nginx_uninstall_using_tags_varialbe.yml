@@ -1,0 +1,23 @@
+---
+- name: Install or uninstall Nginx using tags and variables
+  hosts: all
+  become: true
+
+  vars:
+    package_name: nginx
+
+  tasks:
+    - name: Install Nginx
+      apt:
+        name: "{{ package_name }}"
+        state: present
+        update_cache: yes
+      tags: install_nginx
+
+    - name: Uninstall Nginx
+      apt:
+        name: "{{ package_name }}"
+        state: absent
+        purge: yes
+      tags: uninstall_nginx
+ 

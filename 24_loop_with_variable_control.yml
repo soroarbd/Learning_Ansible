@@ -1,0 +1,19 @@
+---
+- name: loop and loop control 
+  hosts: 192.168.17.129 
+  gather_facts: no 
+  
+  vars:
+   service_list:
+    - wget
+    - apache2
+    - telnet
+
+  tasks:
+   - name: Loop software 
+     debug:
+      msg: "This is sofware: {{ item }} is available at {{ index }}"
+     loop: "{{ service_list }} "
+     loop_control: 
+      index_var: index 
+
